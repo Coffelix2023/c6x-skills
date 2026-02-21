@@ -3,7 +3,7 @@ name: build-mastra-nuxt-pro
 description: Use when creating a production-minded Nuxt frontend Mastra agent with pnpm, based on a plain chat assistant (not weather), including preflight checks, architecture decisions, troubleshooting, and acceptance gates.
 license: Apache-2.0
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   domain: mastra-nuxt
   level: pro
 ---
@@ -29,7 +29,7 @@ Use this skill when the user wants a complete Nuxt + Mastra implementation path 
 
 1. Preflight
 2. Scaffold and dependency setup
-3. Agent conversion (weather -> chat)
+3. Agent conversion (weather -> chat) with DeepSeek model `model="deepseek/deepseek-chat"`
 4. API route integration
 5. UI integration
 6. Validation and acceptance
@@ -39,6 +39,8 @@ Use this skill when the user wants a complete Nuxt + Mastra implementation path 
 
 - Use `pnpm` only.
 - Keep agent as generic chat assistant unless user asks for tools.
+- Default model for this skill is DeepSeek chat: `model="deepseek/deepseek-chat"`.
+- Do not use OpenAI API as the default model path in this skill flow.
 - Do not include secrets in source/docs/logs.
 - Keep all edits incremental and rollback-friendly.
 - If versions conflict, prioritize installed package docs and types.

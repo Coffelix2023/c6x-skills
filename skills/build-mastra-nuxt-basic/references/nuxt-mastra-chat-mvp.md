@@ -6,7 +6,7 @@ This reference is adapted from Mastra Nuxt getting-started flow and constrained 
 
 - Node.js `>= 22.13.0`
 - `pnpm`
-- One model provider API key (for example OpenAI)
+- One model provider API key (DeepSeek for this skill)
 
 ## 2. Create app (optional)
 
@@ -29,13 +29,20 @@ Minimum change strategy:
 
 1. Keep generated Mastra project structure.
 2. Rename agent file and id to `chat-agent`.
-3. Replace system prompt with generic assistant prompt.
-4. Remove weather-specific tool dependencies from this agent.
+3. Set model explicitly to `deepseek/deepseek-chat`.
+4. Replace system prompt with generic assistant prompt.
+5. Remove weather-specific tool dependencies from this agent.
 
 Suggested prompt:
 
 ```text
 You are a concise and helpful general assistant. Answer clearly and ask follow-up questions when requirements are ambiguous.
+```
+
+Minimal model setting example:
+
+```ts
+model="deepseek/deepseek-chat"
 ```
 
 ## 5. Install UI dependencies

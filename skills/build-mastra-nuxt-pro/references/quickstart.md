@@ -23,8 +23,15 @@ pnpm add @mastra/ai-sdk@latest @ai-sdk/vue ai
 ## Convert default weather assistant
 
 1. Rename default weather-oriented agent to `chat-agent`.
-2. Keep only plain assistant prompt.
-3. Remove weather-only tools from this agent unless explicitly requested.
+2. Set the model explicitly: `model="deepseek/deepseek-chat"`.
+3. Keep only plain assistant prompt.
+4. Remove weather-only tools from this agent unless explicitly requested.
+
+Minimal model setting example:
+
+```ts
+model="deepseek/deepseek-chat"
+```
 
 ## Integrate API route
 
